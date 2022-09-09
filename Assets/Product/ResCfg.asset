@@ -19,9 +19,11 @@ MonoBehaviour:
     - Tank.prefab
     - ConfirmBox.prefab
     - Missile.prefab
+    - GameObject.prefab
     valueData:
     - Assets/FrameWork/XLua/Examples/07_AsyncTest/Resources/AlertBox.prefab
     - Packages/com.unity.polybrush/Tests/Templates/PolyEditorUtilityTests/TestGameObject.prefab
     - Assets/Product/Prefab/Tank.prefab
     - Assets/FrameWork/XLua/Examples/07_AsyncTest/Resources/ConfirmBox.prefab
     - Assets/Product/Prefab/Missile.prefab
+    - Assets/Product/Prefab/GameObject.prefab
