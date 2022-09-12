@@ -74,6 +74,7 @@
       <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/ResourceDictionary.cs" />
       <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/ResLoader.cs" />
       <option value="$PROJECT_DIR$/Assets/Product/Script/TestScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/CompExtentions.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2EUVcMjThtu81qjXNtsKvGnkwFW" />

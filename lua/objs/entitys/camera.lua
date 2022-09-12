@@ -21,8 +21,10 @@ function M:on_fixed_update()
 
     if Global.hero then
         local px, py, pz = Global.hero:get_pos3()
-        local dir_vec = -self.transform.forward * 10
-        self.lerp_to_pos:Set(px + dir_vec.x, py + dir_vec.y, pz + dir_vec.z)
+
+         -- 10 臂长
+        local tx, ty, tz = self.transform:GetForwardA(-10)
+        self.lerp_to_pos:Set(px + tx, py + ty, pz + tz)
     end
 
     self.cur_pos_temp:LerpC(self.lerp_to_pos, 0.02)

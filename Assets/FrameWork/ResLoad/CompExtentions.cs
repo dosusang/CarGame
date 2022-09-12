@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public static class CompExtention
 {
@@ -48,6 +49,14 @@ public static class CompExtention
         trans.localScale = new Vector3(scale, scale, scale);
     }
 
+    public static void GetForwardA(this Transform trans, out float x, out float y, out float z, float scale = 1)
+    {
+        var t = trans.forward * scale;
+        x = t.x;
+        y = t.y;
+        z = t.z;
+    }
+
     public static void GetPosA(this Transform trans, ref float x, ref float y, ref float z)
     {
         var pos = trans.position;
@@ -55,4 +64,5 @@ public static class CompExtention
         y = pos.y;
         z = pos.z;
     }
+    
 }
