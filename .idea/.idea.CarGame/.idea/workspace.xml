@@ -68,12 +68,12 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Product/Script/TestScript.cs" />
       <option value="$PROJECT_DIR$/Assets/FrameWork/XLua/Src/LuaEnv.cs" />
       <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/Editor/ResourceDictEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Product/Editor/ResConfig/MyAllPostprocessor.cs" />
       <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/ResourceDictionary.cs" />
       <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/ResLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Product/Script/TestScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2EUVcMjThtu81qjXNtsKvGnkwFW" />

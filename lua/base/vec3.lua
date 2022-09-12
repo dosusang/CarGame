@@ -106,6 +106,11 @@ function vec3.LerpA(from, to, t, out)
 	out:Set(from.x + (to.x - from.x) * t, from.y + (to.y - from.y) * t, from.z + (to.z - from.z) * t)
 end
 
+function vec3.LerpC(from, to, t)
+	t = clamp(t, 0, 1)
+	from:Set(from.x + (to.x - from.x) * t, from.y + (to.y - from.y) * t, from.z + (to.z - from.z) * t)
+end
+
 function vec3:Magnitude()
 	return sqrt(self.x * self.x + self.y * self.y + self.z * self.z)
 end

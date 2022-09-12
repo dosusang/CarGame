@@ -1,7 +1,7 @@
 local M = Util.create_class()
 
 function M:create_hero()
-    return require("objs.entitys.basic_moveable"):new(hero_cfg)
+    return require("objs.entitys.basic_moveable"):new()
 end
 
 function M:load_obj(path, luaobj)
@@ -30,6 +30,7 @@ end
 
 function M:enter_scene()
     Global.hero = self:create_hero()
+    Global.main_cam = require("objs.entitys.camera"):new()
 end
 
 function M:clear()
@@ -39,11 +40,17 @@ end
 
 function M:update()
     local dt = TIME.deltaTime
-    Global.hero:on_update(dt)
+
+    for _, luaobj in pairs(self.cid2obj)  do
+        luaobj:on_update(dt)
+    end
 end
 
 function M:fixed_update()
-    Global.hero:on_fixed_update()
+
+    for _, luaobj in pairs(self.cid2obj) do
+        luaobj:on_fixed_update()
+    end
 end
 
 function M:on_collide(a_cid, b_cid)

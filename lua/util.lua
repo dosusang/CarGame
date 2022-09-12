@@ -59,6 +59,10 @@ function M.lerp(x, y, t)
     return x + t * (y - x)
 end
 
+function M.add3(x1, y1, z1, x2, y2, z2)
+    return x1+x2, y1+y2, z1+z2
+end
+
 function M.clamp(x, min, max)
     if x < min then return min end
     if x < max then return x end

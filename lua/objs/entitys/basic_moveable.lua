@@ -4,16 +4,6 @@ local hero_default_cfg = {
     res_path = "Tank",
     speed = 3,
     born_pos = {x = 0, y = 0, z = 0},
-    gun = {
-        lock_gun = false,
-        keycode = KeyCode.Space,
-        max = 20,
-        speed = 10,
-        shoot_cd = 0.01,
-        live_time = 1,
-        path = "Missile",
-        auto_shot = false,
-    }
 }
 
 local Base = require("objs.entitys.base_obj")

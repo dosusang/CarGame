@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: ResCfg
   m_EditorClassIdentifier: 
   ResMap:
-    keyData: []
-    valueData: []
+    keyData:
+    - Tank.prefab
+    - Missile.prefab
+    - GameObject.prefab
+    - GameCamera.prefab
+    valueData:
+    - Prefab/Tank
+    - Prefab/Missile
+    - Prefab/GameObject
+    - Prefab/GameCamera

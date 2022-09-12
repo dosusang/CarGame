@@ -69,6 +69,16 @@ function M:get_pos2()
     return self.pos.x, self.pos.z
 end
 
+function M:set_pos3(x, y, z)
+    local pos = self.pos
+    pos.x, pos.y, pos.z = x, y, z
+    CompExtention.SetPosA(self.gameobj, x, pos.y, pos.z)
+end
+
+function M:get_pos3()
+    return self.pos.x, self.pos.y, self.pos.z
+end
+
 function M:get_dist_sqrt(obj)
     if not obj or obj.is_destroyed then
         return
