@@ -16,8 +16,8 @@ function M:_init(cfg)
     self:add_component(require("objs.components.player_ctrl"), "ctrler")
 end
 
-function M:die()
-    Base.on_destory(self)
+function M:delete_self()
+    SceneMgr:destory_obj(self)
 end
 
 return M

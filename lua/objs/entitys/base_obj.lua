@@ -53,7 +53,6 @@ function M:on_destory()
         self.components[name] = nil
     end
 
-    UnityGameObject.Destroy(self.gameobj)
     self.transform = nil
     self.is_destroyed = true
 end

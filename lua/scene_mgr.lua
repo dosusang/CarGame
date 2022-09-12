@@ -19,9 +19,20 @@ function M:load_obj(path, luaobj)
     return obj
 end
 
-function M:delete_obj(obj)
-    self.cid2obj[obj.gameobj:GetInstanceID()] = nil
-    obj:on_destory()
+function M:destory_obj(luaobj)
+    if not luaobj then
+        Log.Error("destory_obj: luaobj is nil", debug.traceback()) 
+        return 
+    end
+
+    if luaobj.is_destroyed then 
+        Log.Error("destory_obj: luaobj is is_destroyed", debug.traceback()) 
+        return 
+    end
+
+    self.cid2obj[luaobj.gameobj:GetInstanceID()] = nil;
+    UnityGameObject.Destroy(luaobj.gameobj)
+    luaobj:on_destory()
 end
 
 function M:_init()

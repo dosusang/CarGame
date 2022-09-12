@@ -14,9 +14,10 @@ function M:_init(entity)
     self.vz = 0
 end
 
-
 local KEYMAP = {
-
+    [KeyCode.E] = function(self)
+        self.entity:delete_self()
+    end
 }
 
 function M:get_input()
