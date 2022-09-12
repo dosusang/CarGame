@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
+using System.IO;
 using UnityEngine;
 
 [System.Serializable]
@@ -43,6 +42,9 @@ public class ResourceDictionary : ScriptableObject
 
     public void add(string key, string value)
     {
+        value = value.Replace("Assets/Resources/", "");
+        value = value.Replace(Path.GetExtension(value), "");
+        
         string v;
         if (ResMap.TryGetValue(key, out v))
         {
@@ -80,11 +82,22 @@ public class ResourceDictionary : ScriptableObject
         var list = new List<String>();
         foreach (var k in ResMap.Keys)
         {
-            if (AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(get(k)) == null)
+            if (Resources.Load(get(k)) == null)
             {
                 list.Add(k);
             }
         }
+
+        foreach (var k in list)
+        {
+            delete(k);
+        }
+    }
+    
+    public void ClearAll()
+    {
+        var list = new List<string>();
+        list.AddRange(ResMap.Keys);
 
         foreach (var k in list)
         {

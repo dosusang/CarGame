@@ -1,19 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0d4bda-704c-496c-a577-c5aa5bd9f4b5" name="Default Changelist" comment="" />
+    <list default="true" id="df0d4bda-704c-496c-a577-c5aa5bd9f4b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CarGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CarGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Product/ResCfg.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Product/ResCfg.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Product/ResCfg.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Product/ResCfg.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/GameObject.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/GameObject.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Missile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Missile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Tank.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/Tank.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Render.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Render/Test.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Render/Test.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/BOSSbgm1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/BOSSbgm1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/BOSSbgm2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/BOSSbgm2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/BossBgm.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/BossBgm.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/CharDie.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/CharDie.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/OnCar.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/OnCar.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Rebound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Rebound.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/bgm1_1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/bgm1_1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/bgm1_2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/bgm1_2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/bgm_end.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/bgm_end.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/声波的代(Sonic Generations)-合成器_20_爱给网_aigei_com.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/声波的代(Sonic Generations)-合成器_20_爱给网_aigei_com.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/房子爆炸.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/房子爆炸.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/打屁.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/打屁.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/掉落.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/掉落.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/火箭.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/火箭.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/爆炸.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/爆炸.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/皮坨.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/皮坨.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/编织(Braid)-子弹头撞墙2(bullet_hits_w_爱给网_aigei_com.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/编织(Braid)-子弹头撞墙2(bullet_hits_w_爱给网_aigei_com.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/飞机.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/飞机.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Texture.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44A70D1B-13CF-47E2-9810-E30F45FFAE08/97/3c40fba3/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/27BA4CB2-3925-44D1-8543-B9B88A7ABB28/4d/e4e59ca1/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Product/Script/TestScript.cs" />
       <option value="$PROJECT_DIR$/Assets/FrameWork/XLua/Src/LuaEnv.cs" />
+      <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/Editor/ResourceDictEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Product/Editor/ResConfig/MyAllPostprocessor.cs" />
+      <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/ResourceDictionary.cs" />
+      <option value="$PROJECT_DIR$/Assets/FrameWork/ResLoad/ResLoader.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2EUVcMjThtu81qjXNtsKvGnkwFW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,6 +124,9 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

@@ -13,10 +13,15 @@ public class ResourceDictEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        if (GUILayout.Button("刷新"))
+        if (GUILayout.Button("清空无效资源"))
         {
             mTar.ClearEpt();
         }
+        if (GUILayout.Button("清空所有"))
+        {
+            mTar.ClearAll();
+        } 
+        
         base.OnInspectorGUI();
     }
 }

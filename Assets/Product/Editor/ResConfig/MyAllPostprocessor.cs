@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 using UnityEditor;
 
 // todo 1.只限定某一些资源导入的时候放进配置里；   2.增加一个按钮，主动刷新配置
@@ -42,8 +43,7 @@ class MyAllPostprocessor : AssetPostprocessor
     }
     static string GetName(string path)
     {
-        var cache = path.Split('/');
-        var name = cache[cache.Length - 1];
+        var name = Path.GetFileName(path);
         foreach(var str in mNeedTypes)
         {
             if (name.EndsWith(str))

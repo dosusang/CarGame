@@ -13,21 +13,5 @@ MonoBehaviour:
   m_Name: ResCfg
   m_EditorClassIdentifier: 
   ResMap:
-    keyData:
-    - AlertBox.prefab
-    - Tank.prefab
-    - ConfirmBox.prefab
-    - Missile.prefab
-    - GameObject.prefab
-    - Closed Sprite Shape.prefab
-    - Open Sprite Shape.prefab
-    valueData:
-    - Assets/FrameWork/XLua/Examples/07_AsyncTest/Resources/AlertBox.prefab
-    - Assets/Product/Prefab/Tank.prefab
-    - Assets/FrameWork/XLua/Examples/07_AsyncTest/Resources/ConfirmBox.prefab
-    - Assets/Product/Prefab/Missile.prefab
-    - Assets/Product/Prefab/GameObject.prefab
-    - Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite
-      Shapes/Closed Sprite Shape.prefab
-    - Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite
-      Shapes/Open Sprite Shape.prefab
+    keyData: []
+    valueData: []
