@@ -64,5 +64,5 @@ public static class CompExtention
         y = pos.y;
         z = pos.z;
     }
-    
+
 }

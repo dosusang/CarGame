@@ -4,6 +4,7 @@ local game = require("game_mode")
 
 function game_main.update(dt)
     game.update()
+    ResMgr:update()
 end
 
 function game_main.fixed_update()
@@ -22,6 +23,8 @@ function main()
 
     Input = CS.UnityEngine.Input
     UnityGameObject = CS.UnityEngine.GameObject
+    TypeUnityGameObject = typeof(UnityGameObject)
+
     UnityRb = CS.UnityEngine.Rigidbody
     UnityCollider = CS.UnityEngine.Collider
     KeyCode = CS.UnityEngine.KeyCode
@@ -31,6 +34,7 @@ function main()
     Util = require("util")
     Log = require("log")
 
+    ResMgr = require("mgr.res_mgr"):new()
     SceneMgr = require("scene_mgr"):new()
     game.start()
 end

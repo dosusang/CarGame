@@ -21,4 +21,9 @@ public static class ResLoader
         var q = Resources.LoadAsync(path, type);
         q.completed += onLoaded;
     }
+
+    public static void UnloadRes(UnityEngine.Object obj)
+    {
+        Resources.UnloadAsset(obj);
+    }
 }

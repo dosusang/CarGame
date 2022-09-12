@@ -1,20 +1,21 @@
 local M = Util.create_class()
 
-function M:create_hero()
-    return require("objs.entitys.basic_moveable"):new()
+function M:_init()
+    self.cid2obj = {}
 end
 
 function M:load_obj(path, luaobj)
     if not path then
         Log.Error("obj path is nil", debug.traceback())
     end
-    local res = Util.load_prefab(path)
-    if not res then
+
+    local obj = ResMgr:load(path, TypeUnityGameObject)
+
+    if not obj then
         Log.Error(path .. "资源不存在", debug.traceback())
         return
     end
 
-    local obj = UnityGameObject.Instantiate(res)
     self.cid2obj[obj:GetInstanceID()] = luaobj;
     return obj
 end
@@ -31,12 +32,12 @@ function M:destory_obj(luaobj)
     end
 
     self.cid2obj[luaobj.gameobj:GetInstanceID()] = nil;
-    UnityGameObject.Destroy(luaobj.gameobj)
+    ResMgr:release(luaobj.gameobj)
     luaobj:on_destory()
 end
 
-function M:_init()
-    self.cid2obj = {}
+function M:create_hero()
+    return require("objs.entitys.basic_moveable"):new()
 end
 
 function M:enter_scene()

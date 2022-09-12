@@ -48,7 +48,7 @@ class MyAllPostprocessor : AssetPostprocessor
         {
             if (name.EndsWith(str))
             {
-                return name;
+                return name.Replace(Path.GetExtension(name), "");
             }
         }
         return null;

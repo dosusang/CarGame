@@ -70,7 +70,7 @@ function M.clamp(x, min, max)
 end
 
 function M.load_prefab(name)
-    return ResLoader.LoadRes(Path.GetPath(name .. ".prefab"), typeof(UnityGameObject))
+    return ResLoader.LoadRes(Path.GetPath(name .. ".prefab"), TypeUnityGameObject)
 end
 
 function M.bezier(x0, y0, x1, y1, x2, y2, t)
@@ -81,6 +81,12 @@ function M.bezier(x0, y0, x1, y1, x2, y2, t)
     local p2 = t * t
 
     return p0 * x0 + p1 * x1 +  p2 * x2, p0 * y0 + p1 * y1 +  p2 * y2
+end
+
+function UnityGameObjectDontDestory(name)
+    local obj = UnityGameObject(name)
+    UnityGameObject.DontDestroyOnLoad(obj)
+    return obj
 end
 
 return M
