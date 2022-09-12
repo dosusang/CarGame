@@ -1,7 +1,7 @@
 local M = Util.create_class()
 
 ----------------------------
--- 游戏资源缓冲池 对应每一个资源path
+-- 游戏GameObject缓冲池 对应每一个资源path
 -- 策略：一般状态下自动管理Asset实例
 -- 对于同一资源，若回收时间超过1分钟 则直接销毁
 -- 若回收时间在30s~60s之间  缓存且在一分钟后销毁
@@ -105,7 +105,8 @@ function M:destory_using_obj(luaobj)
 end
 
 function M:on_destory()
-    ResLoader.UnloadRes(self.base_res)
+    -- Resources.load无法卸载指定预设 只能通过统一接口卸载
+    -- ResLoader.UnloadRes(self.base_res)
 end
 
 return M
