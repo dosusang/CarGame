@@ -11,7 +11,9 @@ local KEYMAP = {
         local missile = require("objs.entitys.missile"):new()
         local x, y, z = self.entity:get_pos3()
         missile:set_pos3(x, y, z)
-    end
+    end,
+
+    
 }
 
 function M:get_input()
