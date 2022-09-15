@@ -17,6 +17,7 @@ function M:_init(entity)
     self.dx = 0
     self.dz = 0
 
+    -- 约定武器属性以attr_为前缀
     self.attr_shout_interval = 0.2
     self.attr_dmg = 5
     self.attr_crit = 0.25

@@ -32,7 +32,7 @@ function M:on_update()
 
     local dt = TIME.deltaTime
     local hero_x, hero_z = Global.hero:get_pos2()
-    local self_x, self_z = self:get_pos2()
+    local self_x, _, self_z = self.transform:GetPosA()
     local dx, dz = MathX.normalize2(hero_x - self_x, hero_z - self_z)
 
     local speed = self.move_speed
