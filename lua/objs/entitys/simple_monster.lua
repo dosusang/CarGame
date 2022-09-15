@@ -18,7 +18,7 @@ function M:_init(cfg, x, z)
     -- 招怪自动随机位置
     if not x and not z then
         local hero_x, hero_z = Global.hero:get_pos2()
-        local rd_x, rd_z = (math.random()-0.5) * 10, (math.random()-0.5) * 10
+        local rd_x, rd_z = (math.random()-0.5) * 20, (math.random()-0.5) * 20
         self:set_pos2(hero_x + rd_x, hero_z + rd_z)
     end
 end
@@ -39,5 +39,7 @@ function M:on_update()
     -- 碰撞检测
     self:set_pos2(self_x + dx * speed * dt, self_z + dz * speed * dt)
 end
+
+M.is_monster = true
 
 return M

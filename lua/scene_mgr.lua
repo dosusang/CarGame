@@ -53,7 +53,7 @@ function M:clear()
 end
 
 -- 召怪要不要做个管理器
-local create_monster_interval = 1
+local create_monster_interval = 0.3
 function M:update_create_monster()
     local cur_time = TIME.time
     if cur_time - self.last_create_monster_time > create_monster_interval then

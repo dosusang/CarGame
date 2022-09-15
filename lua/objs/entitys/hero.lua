@@ -21,4 +21,6 @@ function M:delete_self()
     SceneMgr:destory_obj(self)
 end
 
+M.is_hero = true
+
 return M

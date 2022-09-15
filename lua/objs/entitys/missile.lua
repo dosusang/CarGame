@@ -36,8 +36,20 @@ function M:on_update()
     self:update_transform()
 end
 
+-- 最简单的逻辑，之后的伤害计算会在这边
+function M:attack(other)
+
+    -- 阵营区分
+    if other.is_monster then
+        SceneMgr:destory_obj(other)
+        self:delete_self()
+    end
+end 
+
 function M:delete_self()
     SceneMgr:destory_obj(self)
 end
+
+M.is_missile = true
 
 return M
