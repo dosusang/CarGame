@@ -4,15 +4,26 @@ local M = Util.extend_class(Base)
 local BaseMissileCfg = {
     name = "MissileTest",
     res_path = "Missile",
-    LiveTime = 1
+    live_time = 1
 }
 
-
-function M:_init(cfg)
+function M:_init(cfg, dx, dz)
     cfg = cfg or BaseMissileCfg
     Base._init(self, cfg)
 
-    self.live_time = cfg.LiveTime or 1
+    self.dz = dz
+    self.dx = dx
+    self.live_time = cfg.live_time or 1
+
+    -- m/s
+    self.move_speed = 20
+end
+
+function M:update_transform()
+    local px, pz = self:get_pos2()
+    local dt = TIME.deltaTime
+    local speed = self.move_speed
+    self:set_pos2(px + self.dx * dt * speed, pz + self.dz * dt * speed)
 end
 
 function M:on_update()
@@ -22,8 +33,7 @@ function M:on_update()
         self:delete_self()
     end
     
-    local px, pz = self:get_pos2()
-    self:set_pos2(px, pz+0.1)
+    self:update_transform()
 end
 
 function M:delete_self()

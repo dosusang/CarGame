@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResMap:
     keyData:
-    - GameObject
     - Missile
     - GameCamera
     - Tank
+    - SimpleMonster
     valueData:
-    - Prefab/GameObject
     - Prefab/Missile
     - Prefab/GameCamera
     - Prefab/Tank
+    - Prefab/SimpleMonster
