@@ -17,7 +17,9 @@ MonoBehaviour:
     - Missile
     - GameCamera
     - Tank
+    - SimpleMonster
     valueData:
     - Prefab/Missile
     - Prefab/GameCamera
     - Prefab/Tank
+    - Prefab/SimpleMonster

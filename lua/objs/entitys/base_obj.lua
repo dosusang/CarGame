@@ -16,6 +16,9 @@ function M:_init(obj_cfg)
     self.transform.position = self.pos
     self.is_destroyed = false
 
+    -- components_value 组件可以往这个table里直接存值取值，需要稍微小心点操作，因为是所有组件公用的
+    self.cpt_value = {}
+
     local born_pos = obj_cfg.born_pos
     if born_pos then
         self:set_pos2(born_pos.x, born_pos.z)

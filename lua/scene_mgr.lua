@@ -2,6 +2,8 @@ local M = Util.create_class()
 
 function M:_init()
     self.cid2obj = {}
+
+    self.last_create_monster_time = 0
 end
 
 function M:load_obj(path, luaobj)
@@ -16,7 +18,7 @@ function M:load_obj(path, luaobj)
         return
     end
 
-    self.cid2obj[obj:GetInstanceID()] = luaobj;
+    self.cid2obj[obj:GetInstanceID()] = luaobj
     return obj
 end
 
@@ -37,7 +39,7 @@ function M:destory_obj(luaobj)
 end
 
 function M:create_hero()
-    return require("objs.entitys.basic_moveable"):new()
+    return require("objs.entitys.hero"):new()
 end
 
 function M:enter_scene()
@@ -50,8 +52,19 @@ function M:clear()
     Global.hero = nil
 end
 
+-- 召怪要不要做个管理器
+local create_monster_interval = 0.3
+function M:update_create_monster()
+    local cur_time = TIME.time
+    if cur_time - self.last_create_monster_time > create_monster_interval then
+        self.last_create_monster_time = cur_time
+        require("objs.entitys.simple_monster"):new()
+    end
+end
+
 function M:update()
     local dt = TIME.deltaTime
+    self:update_create_monster()
 
     for _, luaobj in pairs(self.cid2obj)  do
         luaobj:on_update(dt)

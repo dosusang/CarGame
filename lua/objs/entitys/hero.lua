@@ -14,11 +14,13 @@ function M:_init(cfg)
     Base._init(self, cfg)
 
     self:add_component(require("objs.components.player_ctrl"), "ctrler")
-    self:add_component(require("objs.components.weapon.gun"), "gun")
+    -- self:add_component(require("objs.components.weapon.base_gun"), "gun")
 end
 
 function M:delete_self()
     SceneMgr:destory_obj(self)
 end
+
+M.is_hero = true
 
 return M
