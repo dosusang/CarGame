@@ -36,7 +36,7 @@ function M:update_shout()
         self.last_shout_time = cur_time
 
         local x, y, z = self.entity:get_pos3()
-        local missile = Missile:new(nil, self.dx, self.dz)
+        local missile = Missile:new(nil, self.dx, self.dz, self)
         missile:set_pos3(x, y, z)
     end
 end
@@ -50,6 +50,10 @@ end
 function M:on_update()
     self:update_shout()
     self:update_dir()
+end
+
+function M:on_destory_missile(missile)
+
 end
 
 return M

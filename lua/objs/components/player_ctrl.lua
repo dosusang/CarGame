@@ -3,7 +3,6 @@ local MathX = require ("base.mathx")
 local Input = CS.UnityEngine.Input
 local KeyCode = CS.UnityEngine.KeyCode
 local deg2rad = math.rad(1)
-local test = require "fsm.base_state_mgr"
 
 function M:_init(entity) 
     self.v_gameobj = entity.gameobj
@@ -23,18 +22,6 @@ end
 local KEYMAP = {
     [KeyCode.E] = function(self)
         self.entity:delete_self()
-    end,
-
-    [KeyCode.Q] = function(self)
-        self.v_test_state_mgr:transition_state("idle")
-    end,
-
-    [KeyCode.A] = function(self)
-        self.v_test_state_mgr:transition_state("attack")
-    end,
-
-    [KeyCode.Z] = function(self)
-        self.v_test_state_mgr:transition_state("chase")
     end,
 }
 
@@ -64,10 +51,6 @@ end
 
 function M:on_update()
     self:get_input()
-
-    if self.v_test_state_mgr then
-        self.v_test_state_mgr:on_update()
-    end
 end
 
 

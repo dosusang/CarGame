@@ -1,5 +1,6 @@
 local Base = require("objs.entitys.base_obj")
 local M = Util.extend_class(Base)
+local Math = require("base.mathx")
 
 local BaseMissileCfg = {
     name = "MissileTest",
@@ -7,16 +8,16 @@ local BaseMissileCfg = {
     live_time = 1
 }
 
-function M:_init(cfg, dx, dz)
+function M:_init(cfg, dx, dz, gun)
     cfg = cfg or BaseMissileCfg
     Base._init(self, cfg)
 
-    self.dz = dz
-    self.dx = dx
+    self.dx, self.dz = Math.normalize2(dx, dz)
     self.live_time = cfg.live_time or 1
 
     -- m/s
     self.move_speed = 20
+    self.gun = gun
 end
 
 function M:update_transform()
@@ -47,6 +48,8 @@ function M:attack(other)
 end 
 
 function M:delete_self()
+    self.gun:on_destory_missile(self)
+    self.gun = nil
     SceneMgr:destory_obj(self)
 end
 
