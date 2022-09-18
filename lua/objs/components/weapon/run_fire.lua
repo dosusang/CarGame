@@ -31,10 +31,7 @@ function M:update_shout()
     local x, y, z = self.entity:get_pos3()
     if cur_time - self.last_shout_time >= self.attr_shout_interval then
         if _abs(x - self.cache_entity_pos_x) > self.run_distance_interval or _abs(z - self.cache_entity_pos_z) > self.run_distance_interval then
-        
-            self.last_shout_time = cur_time
-            local missile = Missile:new(nil, 0, 0)
-            missile:set_pos3(x, y, z)
+            self:shout_missile()
             self.cache_entity_pos_x = x
             self.cache_entity_pos_z = z
         end

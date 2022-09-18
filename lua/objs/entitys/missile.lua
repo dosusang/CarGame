@@ -8,7 +8,12 @@ local BaseMissileCfg = {
     live_time = 1
 }
 
-function M:_init(cfg, dx, dz, gun)
+function M:_init(cfg, param_tb)
+    local dx = param_tb.dx
+    local dz = param_tb.dz
+    local gun = param_tb.gun
+    local missile_idx = param_tb.missile_idx
+    local move_speed = param_tb.move_speed
     cfg = cfg or BaseMissileCfg
     Base._init(self, cfg)
 
@@ -16,8 +21,10 @@ function M:_init(cfg, dx, dz, gun)
     self.live_time = cfg.live_time or 1
 
     -- m/s
-    self.move_speed = 20
+    self.move_speed = move_speed and move_speed or 20
     self.gun = gun
+
+    self.missile_idx = missile_idx
 end
 
 function M:update_transform()
@@ -48,7 +55,7 @@ function M:attack(other)
 end 
 
 function M:delete_self()
-    self.gun:on_destory_missile(self)
+    self.gun:on_destory_missile(self.missile_idx)
     self.gun = nil
     SceneMgr:destory_obj(self)
 end
